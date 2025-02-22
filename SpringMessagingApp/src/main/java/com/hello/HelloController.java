@@ -20,4 +20,9 @@ public class HelloController {
     public String sayHelloPath(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+
+    @PostMapping("/uc4")
+    public String sayHelloPost(@RequestBody UserDTO user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+    }
 }
